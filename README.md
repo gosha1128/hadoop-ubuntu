@@ -76,10 +76,21 @@ mkdir /usr/local/hadoop/data
 
 ### Configuration
 
+#### /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+
 edit /usr/local/hadoop/etc/hadoop/hadoop-env.sh add add/change lines as follows:
 
 ```
 export JAVA_HOME=[CHANGE TO JAVA_HOME SET ABOVE]
 export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true -Djava.library.path=$HADOOP_PREFIX/lib"
 export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
+```
+
+####  /usr/local/hadoop/etc/hadoop/yarn-env.sh
+
+Add the following:
+
+```
+export HADOOP_CONF_LIB_NATIVE_DIR=${HADOOP_PREFIX:-"/lib/native"}
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 ```

@@ -6,7 +6,7 @@ Getting hadoop up and running from scratch is not a trivial task.  Here's how I 
 
 * Ubuntu Desktop 14.04
 
-## Hadoop 2.6.0
+## Hadoop 2.4.0 or 2.6.0
 
 ### Basics
 

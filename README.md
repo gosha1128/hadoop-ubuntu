@@ -10,20 +10,20 @@ Getting hadoop up and running from scratch is not a trivial task.  Here's how I 
 
 ### Basics
 
-Download the 2.6.0 hadoop tar ball and unpack it
+Download the 2.X.0 hadoop tar ball and unpack it
 
 ```
-wget http://mirror.symnds.com/software/Apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
-gunzip hadoop-2.6.0.tar.gz
-tar xvf hadoop-2.6.0.tar
+wget http://mirror.symnds.com/software/Apache/hadoop/common/hadoop-2.X.0/hadoop-2.X.0.tar.gz
+gunzip hadoop-2.X.0.tar.gz
+tar xvf hadoop-2.X.0.tar
 ```
 
 Move the directory
 
 ```
-sudo mv hadoop-2.6.0/ /usr/local
+sudo mv hadoop-2.X.0/ /usr/local
 cd /usr/local
-sudo ln -s hadoop-2.6.0/ hadoop
+sudo ln -s hadoop-2.X.0/ hadoop
 ```
 
 Setup user

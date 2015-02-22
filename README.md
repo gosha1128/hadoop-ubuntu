@@ -178,8 +178,29 @@ Change whole file so it looks like this:
 ### Start Services
 
 As hduser
-```
+````
 /usr/local/hadoop/sbin/start-dfs.sh
 /usr/local/hadoop/sbin/start-yarn.sh
-```
+````
 
+### Test WordCount
+
+Download a large text file
+````
+wget http://www.gutenberg.org/ebooks/20417.txt.utf-8
+````
+
+Make an HDFS directory
+````
+/usr/local/hadoop/bin/hadoop fs -mkdir /test
+````
+
+Copy the text file
+````
+/usr/local/hadoop/bin/hadoop dfs -copyFromLocal /tmp/gutenberg /test
+````
+
+Run the Map-Reduce job
+````
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop*examples*.jar wordcount /test/gutenberg /test/gutenberg-output
+````

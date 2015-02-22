@@ -42,7 +42,7 @@ ssh-keygen -t rsa -P ""
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-Disable IPV6
+Disable IPV6 in /etc/sysctl.conf 
 ```
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1

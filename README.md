@@ -5,3 +5,8 @@ Getting hadoop up and running from scratch is not a trivial task.  Here's how I 
 ## Prerequisites
 
 * Ubuntu Desktiop 14.04
+
+## Hadoop
+
+Download the 2.6.0 hadoop tar ball
+

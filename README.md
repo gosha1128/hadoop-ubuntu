@@ -23,3 +23,12 @@ sudo mv hadoop-2.6.0/ /usr/local
 cd /usr/local
 sudo ln -s hadoop-2.6.0/ hadoop
 ```
+
+Setup user
+
+```
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+sudo adduser hduser sudo
+sudo chown -R hduser:hadoop /usr/local/hadoop/
+```

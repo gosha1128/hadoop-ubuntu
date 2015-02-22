@@ -57,7 +57,7 @@ Install java
 sudo apt-get update
 sudo apt-get install default-jdk
 ```
-Login as hduser.  Add to ~/.bashrc
+(Login as hduser if you aren't.)  Add to ~/.bashrc
 ```
 export HADOOP_HOME=/usr/local/hadoop
 JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")

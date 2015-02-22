@@ -204,3 +204,15 @@ Run the Map-Reduce job
 ````
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop*examples*.jar wordcount /test/gutenberg /test/gutenberg-output
 ````
+
+## Apache Spark 1.2.1
+
+### Hadoop 2.4 build
+
+### Build from source
+
+Install maven
+````
+sudo apt-get install maven
+````
+

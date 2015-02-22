@@ -52,3 +52,8 @@ Restart networking via
 ```
 sudo service networking restart 
 ```
+Install java
+```
+sudo apt-get update
+sudo apt-get install default-jdk
+```

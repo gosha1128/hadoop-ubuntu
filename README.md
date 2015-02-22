@@ -113,3 +113,59 @@ Change whole file so it looks like this:
 </property>
 </configuration>
 ```
+
+#### /usr/local/hadoop/etc/hadoop/mapred-site.xml
+
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ 
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+</configuration>
+```
+
+#### /usr/local/hadoop/etc/hadoop/hdfs-site.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ 
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>
+</configuration>
+```
+
+#### /usr/local/hadoop/etc/hadoop/yarn-site.xml
+
+````
+<?xml version="1.0"?>
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address</name>
+        <value>localhost:8025</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.scheduler.address</name>
+        <value>localhost:8030</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.address</name>
+        <value>localhost:8050</value>
+    </property>
+</configuration>
+````

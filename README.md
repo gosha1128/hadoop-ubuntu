@@ -94,3 +94,22 @@ Add the following:
 export HADOOP_CONF_LIB_NATIVE_DIR=${HADOOP_PREFIX:-"/lib/native"}
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 ```
+
+#### /usr/local/hadoop/etc/hadoop/core-site.xml
+
+Change whole file so it looks like this:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+<property>
+  <name>fs.default.name</name>
+  <value>hdfs://localhost:9000</value>
+</property>
+<property>
+  <name>hadoop.tmp.dir</name>
+  <value>/usr/local/hadoop/data</value>
+</property>
+</configuration>
+```

@@ -8,6 +8,8 @@ Getting hadoop up and running from scratch is not a trivial task.  Here's how I 
 
 ## Hadoop 2.6.0
 
+### Basics
+
 Download the 2.6.0 hadoop tar ball and unpack it
 
 ```
@@ -64,8 +66,20 @@ export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 ```
 Don't forget to source ~/.bashrc
 
+### HDFS
+
 Create a local directory for HDFS
 ```
 su - hduser  # as needed
 mkdir /usr/local/hadoop/data
+```
+
+### Configuration
+
+edit /usr/local/hadoop/etc/hadoop/hadoop-env.sh add add/change lines as follows:
+
+```
+export JAVA_HOME=[CHANGE TO JAVA_HOME SET ABOVE]
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true -Djava.library.path=$HADOOP_PREFIX/lib"
+export HADOOP_COMMON_LIB_NATIVE_DIR=${HADOOP_PREFIX}/lib/native
 ```

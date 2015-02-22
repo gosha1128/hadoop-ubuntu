@@ -32,3 +32,12 @@ sudo adduser --ingroup hadoop hduser
 sudo adduser hduser sudo
 sudo chown -R hduser:hadoop /usr/local/hadoop/
 ```
+
+Setup SSH
+
+```
+su - hduser
+sudo apt-get install ssh
+ssh-keygen -t rsa -P ""
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```

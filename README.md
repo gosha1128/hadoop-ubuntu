@@ -174,3 +174,12 @@ Change whole file so it looks like this:
 ````
 /usr/local/hadoop/bin/hadoop namenode -format
 ````
+
+### Start Services
+
+As hduser
+```
+/usr/local/hadoop/sbin/start-dfs.sh
+/usr/local/hadoop/sbin/start-yarn.sh
+```
+

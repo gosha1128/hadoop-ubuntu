@@ -169,3 +169,8 @@ Change whole file so it looks like this:
     </property>
 </configuration>
 ````
+#### Test Configuration
+
+````
+/usr/local/hadoop/bin/hadoop namenode -format
+````

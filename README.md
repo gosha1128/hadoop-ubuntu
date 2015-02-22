@@ -63,3 +63,9 @@ export HADOOP_HOME=/usr/local/hadoop
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 ```
 Don't forget to source ~/.bashrc
+
+Create a local directory for HDFS
+```
+su - hduser  # as needed
+mkdir /usr/local/hadoop/data
+```

@@ -197,13 +197,19 @@ Make an HDFS directory
 
 Copy the text file
 ````
-/usr/local/hadoop/bin/hadoop dfs -copyFromLocal /tmp/gutenberg /test
+/usr/local/hadoop/bin/hadoop fs -copyFromLocal /tmp/gutenberg /test
 ````
 
 Run the Map-Reduce job
 ````
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop*examples*.jar wordcount /test/gutenberg /test/gutenberg-output
 ````
+
+Retrieve output
+````
+/usr/local/hadoop/bin/hadoop fs -get /test/gutenberg-output
+````
+
 
 ## Apache Spark 1.2.1
 

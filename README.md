@@ -215,7 +215,6 @@ Note:  If you ran this sample already, you may need to remove a previous output 
 /usr/local/hadoop/bin/hadoop fs -rmr /test/gutenberg-output
 ````
 
-
 ## Apache Spark 1.2.1
 
 ### Hadoop 2.4 build
@@ -226,15 +225,16 @@ wget [URL]/spark-1.2.1-bin-hadoop2.4.tar.gz
 tar zvxf spark-1.2.1-bin-hadoop2.4.tar.gz
 ````
 
-### Spark Batch Example on HADOOP Yarn Cluster
+### Spark Batch Example on HADOOP Cluster ( Yarn Client Mode )
 
 Run builtin PI example on yarn cluster ( make sure hadoop hdfs and yarn daemons are started )
 ````
 export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-./bin/spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster --num-executors 3 --driver-memory 100m --executor-memory 100m --executor-cores 1 lib/spark-examples*.jar 10
+./bin/spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --num-executors 3 --driver-memory 100m --executor-memory 100m --executor-cores 1 lib/spark-examples*.jar 10
 ````
+Watch the messages scroll by, look for the final reduce and the message "Pi is roughly..."
 
-### Spark Shell Example ( Standalong )
+### Spark Shell Example ( Standalone )
 
 Run a spark shell (standalone!) example:
 ````

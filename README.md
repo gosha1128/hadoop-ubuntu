@@ -226,16 +226,24 @@ wget [URL]/spark-1.2.1-bin-hadoop2.4.tar.gz
 tar zvxf spark-1.2.1-bin-hadoop2.4.tar.gz
 ````
 
-Run builtin PI example:
+### Spark Batch Example on HADOOP Yarn Cluster
+
+Run builtin PI example on yarn cluster ( make sure hadoop hdfs and yarn daemons are started )
 ````
 export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
-./bin/spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster --num-executors 3 --driver-memory 200m --executor-memory 200m --
-executor-cores 1 lib/spark-examples*.jar 10
+./bin/spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster --num-executors 3 --driver-memory 100m --executor-memory 100m --executor-cores 1 lib/spark-examples*.jar 10
 ````
 
-Run a spark shell example:
+### Spark Shell Example ( Standalong )
+
+Run a spark shell (standalone! ) example:
 ````
 ./bin/spark-shell
 ````
+
+### Spark Shell Example on Cluster
+
+Run a spark shell on a cluster example:
+
 
 

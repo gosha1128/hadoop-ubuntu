@@ -236,14 +236,17 @@ export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 ### Spark Shell Example ( Standalong )
 
-Run a spark shell (standalone! ) example:
+Run a spark shell (standalone!) example:
 ````
 ./bin/spark-shell
 ````
 
 ### Spark Shell Example on Cluster
 
-Run a spark shell on a cluster example:
-
+Run a spark shell on a cluster example ( 4 workers ):
+````
+cp ./conf/spark-env.sh.template ./conf/spark-env.sh
+echo "export SPARK_WORKER_INSTANCES=4" >> ./conf/spark-env.sh
+````
 
 

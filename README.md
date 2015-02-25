@@ -226,7 +226,6 @@ wget [URL]/spark-1.2.1-bin-hadoop2.4.tar.gz
 tar zvxf spark-1.2.1-bin-hadoop2.4.tar.gz
 ````
 
-
 Run builtin PI example:
 ````
 export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
@@ -234,10 +233,9 @@ export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 executor-cores 1 lib/spark-examples*.jar 10
 ````
 
-### Build from source
+Run a spark shell example:
+````
+./bin/spark-shell
+````
 
-Install maven
-````
-sudo apt-get install maven
-````
 

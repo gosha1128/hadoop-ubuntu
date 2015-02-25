@@ -210,6 +210,11 @@ Retrieve output
 /usr/local/hadoop/bin/hadoop fs -get /test/gutenberg-output
 ````
 
+Note:  If you ran this sample already, you may need to remove a previous output directory:
+````
+/usr/local/hadoop/bin/hadoop fs -rmr /test/gutenberg-output
+````
+
 
 ## Apache Spark 1.2.1
 

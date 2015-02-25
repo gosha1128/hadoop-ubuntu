@@ -220,6 +220,20 @@ Note:  If you ran this sample already, you may need to remove a previous output 
 
 ### Hadoop 2.4 build
 
+Download hadooop 2.4 tar ball and unpack it
+````
+wget [URL]/spark-1.2.1-bin-hadoop2.4.tar.gz
+tar zvxf spark-1.2.1-bin-hadoop2.4.tar.gz
+````
+
+
+Run builtin PI example:
+````
+export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
+./bin/spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster --num-executors 3 --driver-memory 200m --executor-memory 200m --
+executor-cores 1 lib/spark-examples*.jar 10
+````
+
 ### Build from source
 
 Install maven

@@ -239,6 +239,9 @@ export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 Run a spark shell (standalone!) example:
 ````
 ./bin/spark-shell
+scala> val textFile = sc.textFile("README.md")    // create a reference to the README.md file
+scala> textFile.count                             // count the number of lines in the file
+scala> textFile.first                             // print the first line
 ````
 
 ### Spark Shell Example on Cluster

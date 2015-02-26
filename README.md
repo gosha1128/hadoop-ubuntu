@@ -253,7 +253,7 @@ object SparkPi {
 }
 ````
 
-### Spark Shell Example ( Standalone )
+### Spark Shell Example ( Standalone, no HADOOP )
 
 Run a spark shell (standalone!) example:
 ````
@@ -263,7 +263,7 @@ scala> textFile.count                             // count the number of lines i
 scala> textFile.first                             // print the first line
 ````
 
-### Spark Shell Example on Cluster
+### Spark Shell Example on Cluster ( with HADOOP )
 
 Run a spark shell on a cluster example ( 4 workers ):
 ````

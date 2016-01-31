@@ -6,6 +6,26 @@ Getting hadoop up and running from scratch is not a trivial task.  Here's how I 
 
 * Ubuntu Desktop 14.04
 
+## Apache Spark 1.6 Binary with Builtin Hadoop
+
+### Download and Unpack
+
+```
+wget http://apache.claz.org/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz
+tar zvxf spark-1.6.0-bin-hadoop2.6.tgz
+cd spark-1.6.0-bin-hadoop2.6/
+```
+
+### Run Standalone Example
+
+OK, now let's verify the package and your system:
+```
+./bin/run-example SparkPi 10
+```
+That will spit out a bunch of logging, including the answer "Pi is roughly 3.139472"
+
+
+
 ## Hadoop 2.4.0 or 2.6.0
 
 ### Basics

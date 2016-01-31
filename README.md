@@ -4,11 +4,12 @@ Getting hadoop and spark up and running from scratch is not a trivial task.
 
 Here's how I did it.  Hopefully these instructions will help you out if you are doing something similar !
 
-## Prerequisites
-
-* Ubuntu Desktop 14.04
 
 ## Apache Spark 1.6 Binary with Builtin Hadoop
+
+## Prerequisites
+
+* Ubuntu Desktop 14.04 ( that's what I use )
 
 ### Download and Unpack
 
@@ -18,7 +19,7 @@ tar zvxf spark-1.6.0-bin-hadoop2.6.tgz
 cd spark-1.6.0-bin-hadoop2.6/
 ```
 
-### Run Standalone Example
+### Sanity Check 1: Run Standalone Example
 
 OK, now let's verify the package and your system:
 ```
@@ -26,6 +27,13 @@ OK, now let's verify the package and your system:
 ```
 That will spit out a bunch of logging, including the answer "Pi is roughly 3.139472"
 
+### Sanity Check 2: Run Python Shell Example
+
+OK, now lets try running a local instance which presents a python shell:
+```
+./bin/pyspark --master local[2]
+```
+Enter the following lines of code:
 
 
 ## Hadoop 2.4.0 or 2.6.0

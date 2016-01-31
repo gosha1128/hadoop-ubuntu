@@ -1,6 +1,8 @@
 # hadoop-ubuntu
 
-Getting hadoop up and running from scratch is not a trivial task.  Here's how I did it - and hopefully these instructions will help you out if you are doing something similar !
+Getting hadoop and spark up and running from scratch is not a trivial task.  
+
+Here's how I did it.  Hopefully these instructions will help you out if you are doing something similar !
 
 ## Prerequisites
 

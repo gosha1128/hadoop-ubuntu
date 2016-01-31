@@ -39,7 +39,7 @@ import sys
 from random import random
 from operator import add
 from pyspark import SparkContext
-partitions = int(sys.argv[1]) if len(sys.argv) > 1 else 2
+partitions = 2
 n = 100000 * partitions
 def f(_):
         x = random() * 2 - 1

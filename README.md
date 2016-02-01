@@ -21,7 +21,7 @@ cd spark-1.6.0-bin-hadoop2.6/
 
 ### Sanity Check 1: Run Standalone Example
 
-OK, now let's verify the package and your system:
+OK, now let's verify the package and your system by computing PI:
 ```
 ./bin/run-example SparkPi 10
 ```
@@ -33,7 +33,7 @@ OK, now lets try running a local instance which presents a python shell:
 ```
 ./bin/pyspark --master local[2]
 ```
-Enter the following lines of code:
+Enter the following lines of code for computing PI:
 ```
 import sys
 from random import random

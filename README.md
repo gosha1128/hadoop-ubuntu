@@ -49,7 +49,7 @@ def f(_):
 count = sc.parallelize(range(1, n + 1), partitions).map(f).reduce(add)
 print("Pi is roughly %f" % (4.0 * count / n))
 ```
-
+Try different values for partition.
 
 ## Hadoop 2.4.0 or 2.6.0
 
